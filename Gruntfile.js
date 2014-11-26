@@ -11,6 +11,17 @@ module.exports = function(grunt) {
           cssDir: 'stylesheets'
         }
       }
+    },
+
+    inline: {
+      dist: {
+        options:{
+          cssmin: true,
+          uglify: true
+        },
+        src: ['_Dropshare-LandingPage.html'],
+        dest: ['Dropshare-LandingPage.html.html']
+      }
     }
 
   });
@@ -18,7 +29,10 @@ module.exports = function(grunt) {
   // Load the plugin that provides the "compass" task.
   grunt.loadNpmTasks('grunt-contrib-compass');
 
+  // Load the plugin that provides the "inline" task.
+  grunt.loadNpmTasks('grunt-inline');
+
   // Default task(s).
-  grunt.registerTask('default', ['compass']);
+  grunt.registerTask('default', ['compass', 'inline']);
 
 };
