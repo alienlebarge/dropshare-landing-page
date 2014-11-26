@@ -3,6 +3,131 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "compass/reset";
+ @import url(http://fonts.googleapis.com/css?family=Oswald:700,400);
+ @import url(http://fonts.googleapis.com/css?family=Playfair+Display:400,400italic);
 
-html {color:blue;}
+ @import "compass/reset/utilities";
+ @import "compass/typography/vertical_rhythm";
+ @import "compass/typography/links/link-colors";
+ @import "compass/css3/box-sizing";
+
+ $base-font-heading: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ $base-font-text: 'Playfair Display', Georgia, Times, 'Times New Roman', serif;
+
+ $base-text-color: #333;
+ $base-primary-color: red;
+ $base-muted-color: #ddd;
+
+ $base-font-size: 18px;
+ $base-line-height: 27px;
+
+ $heading-size-1:          40px;
+ $heading-size-2:          32px;
+ $heading-size-3:          24px;
+ $heading-size-4:          20px;
+ $heading-size-5:          17px;
+ $heading-size-6:          13px;
+ $text-size-small:         $heading-size-6;
+
+ @include global-reset;
+
+ @include establish-baseline();
+
+ /**
+ * Box Model
+ */
+ html {
+   @include box-sizing();
+ }
+
+ * {
+   &,
+   &:before,
+   &:after {
+     @include box-sizing();
+   }
+ }
+
+ body {
+   font-family: $base-font-text;
+   color: $base-text-color;
+   padding: $base-font-size;
+ }
+
+ /**
+ * Shared rhythm
+ */
+
+ /* Verticla rhythm */
+ h1, h2, h3, h4, h5, h6,
+ ul, ol, dl,
+ blockquote, p, address,
+ table,
+ fieldset, figure,
+ pre,
+ %margin-bottom {
+   @include rhythm();
+ }
+
+ /* Horizontal rhythm */
+ ul, ol, dd,
+ %margin-left {
+   @include apply-side-rhythm-border(left, 0px);
+ }
+
+ /**
+ * Headings
+ */
+
+ h1 {
+   font-family: $base-font-heading;
+   @include adjust-font-size-to($heading-size-1);
+   @include rhythm(1, 0, 0, 0, $heading-size-1);
+ }
+
+ h2 {
+   font-family: $base-font-heading;
+   @include adjust-font-size-to($heading-size-2);
+   @include rhythm(1, 0, 0, 0, $heading-size-2);
+ }
+
+ /**
+ * List
+ */
+
+ ul {
+   list-style: disc;
+ }
+
+ /**
+ * Links
+ */
+ a {
+   color: $base-text-color;
+   @include link-colors($base-text-color, $base-primary-color);
+ }
+
+ /**
+ * Small text
+ */
+ small,
+ .small {
+   @include adjust-font-size-to($text-size-small);
+ }
+
+ /**
+ * Responsive thumbnail
+ */
+ .img-thumbnail {
+   max-width: 100%;
+ }
+
+ /**
+ * Muted text
+ */
+ .muted {
+   color: $base-muted-color;
+   a {
+     @include link-colors($base-muted-color, $base-primary-color);
+   }
+ }
