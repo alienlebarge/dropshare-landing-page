@@ -1,5 +1,15 @@
-dropshare-landing-page
-======================
+# dropshare-landing-page
+
+## Drop...what?
+
+[Dropshare](http://getdropsha.re) let you share files with friends or colleagues.
+Instead of uploading them on a company server (like Cloudapp or Dropplr), [Dropshare](http://getdropsha.re) lets you turn your own server into a sharing plateform.
+
+## What is this repo ?
+
+I am a [Dropshare](http://getdropsha.re) user and I wanted to have my own landing page. You can have a look at it on [Codepen](http://codepen.io/alienlebarge/pen/wBaJPb).
+
+Feel free to [fork this repo](https://github.com/alienlebarge/dropshare-landing-page/fork) and build your own landing page.
 
 ## Variables
 
@@ -24,3 +34,5 @@ These componments are used to build the landing page:
 1. Install node modules `$ npm install`
 1. Build your css (using Compass) in `/css`
 1. Run `$ grunt`
+1. Copy `Dropshare-LandingPage.html` as your Dropshare's landing page.
+1. [Share files](http://media.giphy.com/media/12G5qRaZX42c7e/giphy-tumblr.gif) !
