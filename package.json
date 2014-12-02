@@ -23,6 +23,7 @@
   "homepage": "https://github.com/alienlebarge/dropshare-landing-page",
   "devDependencies": {
     "grunt": "^0.4.5",
-    "grunt-contrib-compass": "^1.0.1"
+    "grunt-contrib-compass": "^1.0.1",
+    "grunt-inline": "~0.3.2"
   }
 }
