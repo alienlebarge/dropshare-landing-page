@@ -32,7 +32,22 @@ These componments are used to build the landing page:
 ## How to use
 
 1. Install node modules `$ npm install`
+1. Create a `settings.json` file ([see bellow](#settings))
 1. Build your css (using Compass) in `/css`
 1. Run `$ grunt`
 1. Copy `Dropshare-LandingPage.html` as your Dropshare's landing page.
 1. [Share files](http://media.giphy.com/media/12G5qRaZX42c7e/giphy-tumblr.gif) !
+
+### Settings
+
+Here's the informaiton you have to provide in `setings.json`:
+
+```json
+{
+  "rooturl": "http://www.website.com/",
+  "ga": "UA-XXXXXXX-X"
+}
+```
+
+- The `rooturl` allow to build the [Twitter Cards](https://dev.twitter.com/cards/overview) meta tags.
+- `ga` is your Google Analytics id.
