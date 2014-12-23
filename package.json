@@ -24,6 +24,7 @@
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-compass": "^1.0.1",
-    "grunt-inline": "~0.3.2"
+    "grunt-inline": "~0.3.2",
+    "grunt-text-replace": "^0.4.0"
   }
 }
