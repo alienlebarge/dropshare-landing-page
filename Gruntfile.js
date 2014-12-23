@@ -27,8 +27,8 @@ module.exports = function(grunt) {
 
     replace: {
       root: {
-        src: ['Dropshare-LandingPage.html'],             // source files array (supports minimatch)
-        dest: 'Dropshare-LandingPage.html',             // destination directory or file
+        src: ['<%= inline.dist.dest  %>'],             // source files array (supports minimatch)
+        dest: '<%= inline.dist.dest  %>',             // destination directory or file
         replacements: [{
           from: '{{rooturl}}',
           to: '<%= settings.rooturl  %>'
