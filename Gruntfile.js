@@ -34,7 +34,7 @@ module.exports = function(grunt) {
           to: '<%= settings.rooturl  %>'
         },
         {
-          from: 'UA-XXXXXXXX-X',
+          from: '{{ga}}',
           to: '<%= settings.ga  %>'
         }
         ]
