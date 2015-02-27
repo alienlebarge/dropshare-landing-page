@@ -4,3 +4,4 @@ node_modules
 npm-debug.log
 Dropshare-LandingPage.html
 settings.json
+.DS_Store
