@@ -20,8 +20,8 @@ module.exports = function(grunt) {
           cssmin: true,
           uglify: true
         },
-        src: ['_Dropshare-LandingPage.html'],
-        dest: ['Dropshare-LandingPage.html']
+        src: '_Dropshare-LandingPage.html',
+        dest: 'Dropshare-LandingPage.html'
       }
     },
 
