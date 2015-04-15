@@ -44,10 +44,8 @@ Here's the informaiton you have to provide in `setings.json`:
 
 ```json
 {
-  "rooturl": "http://www.website.com/",
   "ga": "UA-XXXXXXX-X"
 }
 ```
 
-- The `rooturl` allow to build the [Twitter Cards](https://dev.twitter.com/cards/overview) meta tags.
 - `ga` is your Google Analytics id.
