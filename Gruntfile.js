@@ -29,10 +29,7 @@ module.exports = function(grunt) {
       root: {
         src: ['<%= inline.dist.dest  %>'],             // source files array (supports minimatch)
         dest: '<%= inline.dist.dest  %>',             // destination directory or file
-        replacements: [{
-          from: '{{rooturl}}',
-          to: '<%= settings.rooturl  %>'
-        },
+        replacements: [
         {
           from: '{{ga}}',
           to: '<%= settings.ga  %>'
